@@ -1,4 +1,4 @@
-# create-state-machine
+# create-state-machine [![Build Status](https://travis-ci.org/taskworld/create-state-machine.svg?branch=master)](https://travis-ci.org/taskworld/create-state-machine) [![codecov](https://codecov.io/gh/taskworld/create-state-machine/branch/master/graph/badge.svg)](https://codecov.io/gh/taskworld/create-state-machine)
 
 An implementation of [__state pattern__](https://en.wikipedia.org/wiki/State_pattern) in JavaScript, designed to help removing state-dependent variables.
 

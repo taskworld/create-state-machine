@@ -36,7 +36,7 @@ If will call the `exit()` method on the previous state if defined, and then call
 ## Motivation and Example
 
 State pattern is very useful when your system has to exist in different states.
-Without the state pattern, your variables may be used by some states, but are irrelevant in other states.
+Without the state pattern, your variables may be used in some states, but may be irrelevant in other states.
 
 For example, consider a message buffer that queues up a messages.
 
@@ -44,6 +44,16 @@ For example, consider a message buffer that queues up a messages.
 - Once connected, new messages should also go directly to the subscriber, bypassing the queue.
 - If the subscriber disconnects, then it should go back to queueing mode.
 - Only a single subscriber is allowed.
+
+The API is designed to have these methods:
+
+- `push(message)`. Sends a message to the subscriber (if connected) or add it to a queue.
+- `connect(subscriber)`. Connects the subscriber. All queued messages are sent to this subscriber (if any).
+- `disconnect()`. Disconnects the subscriber.
+- `isConnected()`. Returns true if there’s an active subscriber, false otherwise.
+
+See [the test cases](#the-test) for more details. Now, let’s look at how one would implement it.
+
 
 ### Normal version
 

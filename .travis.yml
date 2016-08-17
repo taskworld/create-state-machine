@@ -1,3 +1,11 @@
 language: node_js
 node_js:
 - '6'
+deploy:
+  provider: npm
+  email: thai.p+bot@taskworld.com
+  api_key:
+    secure: Gnqtkb80XW91xcxh96RrjpVWoeAxxm1d6dCZ9bLoce6uSefNH5CWL1hHxddAhhBS3DmntJIrA8LxyIN9CQ2a+Ip5eVc80HC4fIddyJP+UbH4IndA9oicbJbh72zIj+aNETADB1dxLwEKZwD1Vqr75f7uHf9cqAHmwK7xkTRed6pEDjG1SVatxwC97Dm56H83Ps4JxycDUWXyqJZ9UVBpmEoP0WofSCqLPSdSivXDznttCtTvXF5DWLL6Z7hCmGYv0LOvNae+Q+XxuyqcB5gUU3zzg5dV6R6r6GBAnpjM4vHkssyoo73bysDIx2ly2KdYP+Of8SN0j0iXC7QL4Pt4p5PegAJcAVrJM7WlT3NY5n2VemBeOesmp9USChWYPEKdxlunGkpGXZZcAmoYGSarKFT/yOhlynntxXaQp9BfsWd7ZZugQraJQAteaHU6QEhUnOvroZympHicXz92Z687Q2X21TzRqu1NY/MeiQOxz6c785DYO3raTLCEm/DyHb0EcyV0pSynTyXcYvR7HE6khuEjrG9fV+5pHhbWQoAu1ATk3caHRXM81JtggvX56EZhHB5bJT4BLiSKU6JzoJW6E2B+Xp3eCdFo1vtQ7pQ1JDON+VqzRrAN+oAvErWDlrN6hN0lFoqACpnL5wRLHWholOGUdC+qrFHKwXmtDsoeiXk=
+  on:
+    tags: true
+    repo: taskworld/create-state-machine

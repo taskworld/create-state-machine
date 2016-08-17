@@ -1,6 +1,6 @@
 {
   "name": "create-state-machine",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0",
   "description": "Implementation of the State Pattern in JavaScript.",
   "main": "lib/index.js",
   "files": [

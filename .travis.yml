@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - '6'
+after_success:
+- bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: npm
   email: thai.p+bot@taskworld.com

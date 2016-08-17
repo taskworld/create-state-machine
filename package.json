@@ -1,10 +1,15 @@
 {
   "name": "create-state-machine",
   "version": "2.0.0-alpha.0",
-  "description": "Implementation of the state pattern.",
-  "main": "index.js",
+  "description": "Implementation of the State Pattern in JavaScript.",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "essay build",
+    "test": "essay test"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/taskworld/create-state-machine/issues"
   },
-  "homepage": "https://github.com/taskworld/create-state-machine#readme"
+  "homepage": "https://github.com/taskworld/create-state-machine#readme",
+  "devDependencies": {
+    "essay": "^3.0.1"
+  }
 }

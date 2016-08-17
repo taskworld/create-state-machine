@@ -1,7 +1,7 @@
 {
   "name": "create-state-machine",
-  "version": "1.0.0",
-  "description": "Friendly state machine for complex DOM interactions",
+  "version": "2.0.0-alpha.0",
+  "description": "Implementation of the state pattern.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

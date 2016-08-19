@@ -101,7 +101,9 @@ __In this version, there are many state-dependent variables.__
 - The `_queue` is only used in disconnected state.
 - The `_subscriber` is only used in connected state.
 
-But these variables exist under the same scope, although they are used in some states but not the others.
+But these variables exist under the same scope, although they are used in some states but not the others. They are like global variables. There is also a redundant variable:
+
+- The `_connected` variable is redundant because we can also derive its value from the values of `_queue` and `_subscriber`. Still we have to maintain it and make sure that it stays in sync with other variables, because if we remove that variable it makes our logic less clear: which one is the source of truth? how should we check for connected state — `!_queue` or `!!_subscriber`?
 
 __This is a code smell.__ You have to keep track of the current state and which variables are related to that state when you read/modify the code. Also, if not careful, your system may get into an inconsistent state (e.g. `_connected` is false but `_queue` is null).
 
